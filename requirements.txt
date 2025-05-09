@@ -1,0 +1,39 @@
+click==8.1.7
+label-studio-ml==1.0.8
+label-studio>=1.0.0
+supervisor==4.2.2
+tensorboardX==1.9
+aixblock-sdk==0.0.5
+aixblock-tools
+
+scikit-learn
+gunicorn==20.1.0
+scikit-image
+wow_ai_ml==0.1.9
+wow_ai_sdk
+# gradio==3.50
+opencv-python
+flask-cors
+ipython
+aixblock-ml
+flask_swagger_ui
+gradio-webrtc
+plotly
+twilio
+gradio
+grafana_api
+monai
+matplotlib
+datasets
+torch==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu126
+torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+ruamel.yaml
+roboflow
+supervision
+mcp
+hydra_core
+loguru
+submitit
+iopath
+omegaconf
