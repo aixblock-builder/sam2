@@ -1,0 +1,53 @@
+05:35:36 Worker rq:worker:e7de0eda76524e3298bc41c289edfd8c: started, version 1.10.0
+05:35:36 Subscribing to channel rq:pubsub:e7de0eda76524e3298bc41c289edfd8c
+05:35:36 *** Listening on default...
+05:35:36 Cleaning registries for queue: default
+11:59:06 Worker rq:worker:38f7f017b003460d8fe35114303a43c1: started, version 1.10.0
+11:59:06 Subscribing to channel rq:pubsub:38f7f017b003460d8fe35114303a43c1
+11:59:06 *** Listening on default...
+11:59:06 Cleaning registries for queue: default
+12:26:06 Cleaning registries for queue: default
+07:37:08 Worker rq:worker:46b22df9a18b4bc7af0a95969643b9c6: started, version 1.10.0
+07:37:08 Subscribing to channel rq:pubsub:46b22df9a18b4bc7af0a95969643b9c6
+07:37:08 *** Listening on default...
+07:37:08 Cleaning registries for queue: default
+07:44:08 Worker rq:worker:10c904ba90c34466a733cd974c95f328: started, version 1.10.0
+07:44:08 Subscribing to channel rq:pubsub:10c904ba90c34466a733cd974c95f328
+07:44:08 *** Listening on default...
+07:45:32 Worker rq:worker:1326b29f7e0141569e8f953ae396bfa5: started, version 1.10.0
+07:45:32 Subscribing to channel rq:pubsub:1326b29f7e0141569e8f953ae396bfa5
+07:45:32 *** Listening on default...
+07:48:23 Worker rq:worker:04a087d0ddcc4348a0d9e41cfe70225f: started, version 1.10.0
+07:48:23 Subscribing to channel rq:pubsub:04a087d0ddcc4348a0d9e41cfe70225f
+07:48:23 *** Listening on default...
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+Error -3 connecting to redis_detectron:6379. Temporary failure in name resolution.
+15:30:21 Worker rq:worker:c605916cc2fd40ce9e1c85ae782f9624: started, version 1.10.0
+15:30:21 Subscribing to channel rq:pubsub:c605916cc2fd40ce9e1c85ae782f9624
+15:30:21 *** Listening on default...
+15:30:21 Cleaning registries for queue: default
+15:34:41 Worker rq:worker:4dffe310dbd54671a201bff3fe189a0f: started, version 1.10.0
+15:34:41 Subscribing to channel rq:pubsub:4dffe310dbd54671a201bff3fe189a0f
+15:34:41 *** Listening on default...
+17:23:52 Worker rq:worker:eb4c34d5479042baac2c9f1b7d4ca173: started, version 1.10.0
+17:23:52 Subscribing to channel rq:pubsub:eb4c34d5479042baac2c9f1b7d4ca173
+17:23:52 *** Listening on default...
+17:23:52 Cleaning registries for queue: default
