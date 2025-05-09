@@ -1,0 +1,54 @@
+version: "3.3"
+
+services:
+  # redis:
+  #   container_name: segment_anything_annotation_redis
+  #   hostname: segment_anything_annotation_redis
+  #   image: redis:alpine
+  #   command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+  #   volumes:
+  #     - ./redis:/usr/local/etc/redis
+  #     - ./redis/db:/var/lib/redis
+
+  segment_anything_annotation: &base
+    container_name: segment_anything_annotation
+    image: wowai/segment_anything
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - MODEL_DIR=/data/models
+      - RQ_QUEUE_NAME=default
+      - REDIS_HOST=segment_anything_annotation_redis
+      - REDIS_PORT=6380
+      - HOSTNAME=https://dev-us-west-1.aixblock.io/
+      - HOST=https://dev-us-west-1.aixblock.io/
+      - API_KEY=ebcf0ceda01518700f41dfa234b6f4aaea0b57af
+      - IN_DOCKER=True
+    ports:
+      - 9090:9090
+      - "6006"
+
+  # semantic_segmentation_with_masks:
+  #   <<: *base
+  #   container_name: semantic_segmentation_with_masks
+  #   image: wowai/semantic_segmentation_with_masks
+  #   ports:
+  #     - "9090"
+  #     - "6006"
+
+  # semantic_segmentation_with_polygons:
+  #   <<: *base
+  #   container_name: semantic_segmentation_with_polygons
+  #   image: wowai/semantic_segmentation_with_polygons
+  #   ports:
+  #     - "9090"
+  #     - "6006"
+
+  # inventory_tracking:
+  #   <<: *base
+  #   container_name: inventory_tracking
+  #   image: wowai/inventory_tracking
+  #   ports:
+  #     - "9090"
+  #     - "6006"
