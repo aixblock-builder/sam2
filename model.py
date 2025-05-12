@@ -7,7 +7,6 @@ import sys
 import threading
 import time
 import uuid
-from typing import Iterator
 
 import gradio as gr
 import numpy as np
@@ -245,17 +244,27 @@ class MyModel(AIxBlockMLBase):
                         channels.append({"channel": ch, "status": info})
 
                 return {"channels": channels}
-    
+
         elif command.lower() == "tensorboard":
             project_id = kwargs.get("project_id")
-            clone_dir = os.path.join(os.getcwd())
+
             def run_tensorboard():
                 # train_dir = os.path.join(os.getcwd(), "{project_id}")
                 # log_dir = os.path.join(os.getcwd(), "logs")
                 if project_id:
-                    p = subprocess.Popen(f"tensorboard --logdir ./sam2_logs/ --host 0.0.0.0 --port=6006", stdout=subprocess.PIPE, stderr=None, shell=True)
+                    p = subprocess.Popen(
+                        "tensorboard --logdir ./sam2_logs/ --host 0.0.0.0 --port=6006",
+                        stdout=subprocess.PIPE,
+                        stderr=None,
+                        shell=True,
+                    )
                 else:
-                    p = subprocess.Popen(f"tensorboard --logdir ./sam2_logs/ --host 0.0.0.0 --port=6006", stdout=subprocess.PIPE, stderr=None, shell=True)
+                    p = subprocess.Popen(
+                        "tensorboard --logdir ./sam2_logs/ --host 0.0.0.0 --port=6006",
+                        stdout=subprocess.PIPE,
+                        stderr=None,
+                        shell=True,
+                    )
                 out = p.communicate()
                 print(out)
 
@@ -264,7 +273,7 @@ class MyModel(AIxBlockMLBase):
             return {"message": "tensorboardx started successfully"}
         else:
             return {"message": "command not supported", "result": None}
-        
+
     @mcp.tool()
     def model(self, **kwargs):
         def load_model():
@@ -282,6 +291,7 @@ class MyModel(AIxBlockMLBase):
             sam2_base = build_sam2(model_cfg_base, checkpoint_base, device="cuda")
             mask_generator_base = SAM2AutomaticMaskGenerator(sam2_base)
             return "Base model loaded successfully!"
+
         def segment_and_annotate(input_image):
             global mask_generator_base
             if mask_generator_base is None:
@@ -298,9 +308,10 @@ class MyModel(AIxBlockMLBase):
             base_annotator = sv.MaskAnnotator(color_lookup=sv.ColorLookup.INDEX)
             base_annotated_image = opened_image.copy()
             base_annotated_image = base_annotator.annotate(
-                base_annotated_image, detections=base_detections1
+                base_annotated_image, detections=base_detections
             )
             return base_annotated_image, "Completed!"
+
         with gr.Blocks() as demo:
             gr.Markdown("# Segment Anything 2.1 Base Demo")
             load_btn = gr.Button("Load Base Model")
